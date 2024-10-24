@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+*{
+  
+     box-sizing: border-box;
+
+} 
+
+
+
+
+/* inorder to use flex direction it will have many of the type in it 
+1.column  will align at the vertically anywhere 
+2.row-reverse column 
+** display will show as the block at the one end
+
+3. the flex direction it will not have inline 
+4.if we use the justify content center it will only align at the center at the top of the main box 
+5.if we use alignitemscenter will only wil show the all the box at the center of the box.. */
+body {
+
+     font-family:'roboto',sans-serif ;
+     background-color: rgb(2, 0, 4);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     color: chartreuse;
+
+}
+   /* whole container */
+.wrap {
+
+   background-color: rgb(178, 149, 243);
+   border: 1px solid rgb(115, 124, 131);
+   margin: 20px 0;
+   padding: 50px;
+   position: relative;
+   color: rgb(0, 0, 0);
+   width: 600px;
+}
+/* when the button is on and it will emerge its as a container which refers as the active  */
+
+.wrap.active {
+  
+    background-color: rgb(170, 255, 80) ;
+ 
+}
+/* heading  */
+.wrap-title {
+    /* here the margin can be reffered as the 4 components top,left,right,bottom */
+    margin: 0 35px 0 0 ;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px white;
+}
+/* text refers the paragraph */
+.wrap-text {
+
+    display: none ;
+    margin: 30px ;
+    font-style: italic;
+    font-size: bold;
+}
+/* when the button is on it will represent the respective paragraph and will active */
+
+.wrap.active .wrap-text {
+ 
+    display: block;
+
+
+}
+
+.wrap-toggle {
+  
+    background-color: rgb(5, 8, 1);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+
+
+}
+
+
+.wrap-toggle .fa-solidsfa-angle-down {
+  
+      font-size: 1.5rem;
+      
+
+}
+
+.wrap-toggle.wrap.fa-square-xmark {
+    
+    font-size: 1.5rem;
+ 
+
+}
+
+.wrap-toggle:focus {
+
+    outline:block ;
+   
+
+
+}
+.wrap-toggle .fa-square-xmark {
+
+    display: block;
+
+}
+
+.wrap-toggle.active .wrap-toggle .fa-square-xmark {
+
+    display: block;
+}
+
